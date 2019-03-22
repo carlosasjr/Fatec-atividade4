@@ -2,8 +2,13 @@
 <!--
 Atividade 4 (até 26/03/2019)
 Em dupla, criem um site com 2 páginas sobre uma tendência de TI apontada pelo Gartner em 2019.
-Uma página deve ter tópicos sobre o assunto e cada tópico deve ter o texto correspondente. Todos os textos começam ocultos na página, sendo que o usuário visualiza apenas os tópicos. Quando o usuário clicar no link de um tópico, o texto correspondente deve ser exibido na mesma página.
-A outra página deve ter um formulário HTML com os seguintes campos e deve ser validado assim que o usuário tentar enviá-lo: E-mail (deve ser um e-mail válido), Nome completo (mínimo de 10 caracteres e deve ter um espaço pelo menos), Dúvida (máximo de 400 caracteres).
+Uma página deve ter tópicos sobre o assunto e cada tópico deve ter o texto correspondente.
+Todos os textos começam ocultos na página, sendo que o usuário visualiza apenas os tópicos. Quando o usuário clicar no link de um tópico, o texto correspondente deve ser exibido na mesma página.
+A outra página deve ter um formulário HTML com os seguintes campos e deve ser validado assim que o usuário
+tentar enviá-lo: 
+E-mail (deve ser um e-mail válido),
+Nome completo (mínimo de 10 caracteres e deve ter um espaço pelo menos),
+Dúvida (máximo de 400 caracteres).
 O layout das páginas deve ser este, e deve ser implementado com Bootstrap:
 
 Carlos
@@ -14,20 +19,35 @@ Bruno Mota
         <title>Atividade 4 - Carlos e Bruno Mota</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" href="css/style.css" rel="stylesheet">
-        <script type="text/javascript" src="js/script.js"></script>
+        <link type="text/css" href="css/estilo.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="css/bootstrap-notify.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
             <!--TOPO A E -->
             <header class="row" id="topo">
-                <div class="col-12 col-md-6 min-height-100 text-center">
-
+                <div class="col-12 col-md-6 min-height-100 text-center" id="registro">
+                    <div>
+                    <h1>Registro de dúvidas</h1>
+                    </div>
                 </div>                     
 
                 <div class="col-12 col-md-6 min-height-50">
-
+                    <form method="post" onsubmit="return validar()" name='formulario' id="formulario">
+                        <label for="nome">Nome</label>
+                    <input id="nome" placeholder="NOME COMPLETO" class="form-control" type="text" name="nome" />
+                        <label for="email">E-mail</label>
+                    <input  id="email" placeholder="E-MAIL" class="form-control" type="email" name="email" />
+                        <label for="email">Dúvidas</label><br/>
+                    <textarea id="duvidas" name="duvidas" data-ls-module="charCounter" class="form-control" placeholder="Preecha com suas dúvidas."></textarea><br/>
+                    <input class="btn btn-primary" type="submit" value="Enviar" name="btnEnviar" onsubmit="validar()" /> 
+                    <div id="msgemail"></div>
+                    </form>
                 </div>
+                    
             </header>
 
 
