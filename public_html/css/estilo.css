@@ -16,17 +16,18 @@
 .cartao {
     margin-bottom: 10px;
 }
+
 #registro{
-    background-color: #07a5db;
-    border-radius: 0px 0px 2px 2px;
-    color: #fff3cd;
-    
-}
-h1{
-    padding: 10%;
-    background-color: #004085;
+    position: relative;
+    color: #009;
+    padding: 8%;
+    background-color: #bdd1df;
     border-radius: 0px 0px 9px 9px;
-  }
+    }
+    label{
+     color: #32383e;
+     font-weight: bold;
+    }
   div{
       
       border-width:2px;
