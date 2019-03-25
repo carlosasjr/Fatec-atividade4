@@ -45,18 +45,32 @@ Bruno Mota
             <!--CORPO B -->
             <section class="row">
                 <div class="col-12 col-md-12">
-                    <form method="post" onsubmit="return validar()" name='formulario' id="formulario">
-                        <label for="nome">Nome</label>
-                    <input id="nome" placeholder="NOME COMPLETO" class="form-control" type="text" name="nome" />
-                        <label for="email">E-mail</label>
-                    <input  id="email" placeholder="E-MAIL" class="form-control" name="email" />
-                        <label for="duvidas">Dúvidas</label><br/>
-                    <textarea id="duvidas" name="duvidas" data-ls-module="charCounter" class="form-control" placeholder="SUAS DÚVIDAS AQUÍ!."></textarea><br/>
-                    <input class="btn btn-primary" type="submit" value="Enviar" name="btnEnviar" onsubmit="validar()" /> 
-                    <div id="msgemail"></div>
-                    </form>                                               
+                    <br>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            Formulário
+                        </div>
+
+                        <div class="card-body">
+
+                            <form method="post" onsubmit="return validar()" name='formulario' id="formulario">
+                                <label for="nome">Nome</label>
+                                <input id="nome" placeholder="NOME COMPLETO" class="form-control" type="text" name="nome" />
+                                <label for="email">E-mail</label>
+                                <input  id="email" placeholder="E-MAIL" class="form-control" name="email" />
+                                <label for="duvidas">Dúvidas</label><br/>
+                                <textarea id="duvidas" name="duvidas" data-ls-module="charCounter" class="form-control" placeholder="Preecha com suas dúvidas."></textarea><br/>
+                                <input class="btn btn-primary" type="submit" value="Enviar" name="btnEnviar" onsubmit="validar()" /> 
+                                <div id="msgemail"></div>
+                            </form>     
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            <br>
+            <br>
 
             <!--RODAPE C D -->
             <footer class="row" id="rodape">
