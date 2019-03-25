@@ -45,8 +45,7 @@ erro =true;
 }	
 
 //Verifica espaços no e-mail
-if ( email.search( /\s/g ) !== -1 )
-	{
+if ( email.search( /\s/g ) !== -1 ){
 		$.notify({
                     message:"Campo e-mail com espaços em branco"
                 },{
@@ -91,7 +90,7 @@ if (erro === false) {
         type: 'success',
         timer:2000
   });
-return false;
-}
 
+}
+return false;
 }
