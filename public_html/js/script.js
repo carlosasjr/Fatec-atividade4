@@ -32,10 +32,22 @@ var sEmail	= $("#email").val();
 
 erro =true;
 		}	
-if (duvidas.length > 400) {
+if (duvidas.length > 400 ) {
 $(document).ready(function(){
     $.notify({
         message:"Campo duvidas excede 400 caracteres"
+    },{
+    type: 'danger',
+    timer: 2000
+    
+});
+});
+erro =true;
+}
+if (duvidas.length < 1 ) {
+$(document).ready(function(){
+    $.notify({
+        message:"Campo duvidas está em branco"
     },{
     type: 'danger',
     timer: 2000
