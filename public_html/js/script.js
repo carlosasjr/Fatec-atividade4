@@ -15,7 +15,6 @@ $(document).ready(function(){
 
 });
 erro =true;
-                    //return false;
 }
 var sEmail	= $("#email").val();
 		var emailFilter=/^.+@.+\..{2,}$/;
@@ -32,9 +31,8 @@ var sEmail	= $("#email").val();
 });
 
 erro =true;
-                    //return false;
 		}	
-if (duvidas.length > 2) {
+if (duvidas.length > 400) {
 $(document).ready(function(){
     $.notify({
         message:"Campo duvidas excede 400 caracteres"
@@ -48,7 +46,7 @@ erro =true;
 }
 if (erro == false) {
                                 $.notify("Cadastrado com sucesso!", "success");
-                            return false;
+                            
 }
 return false;
 }
