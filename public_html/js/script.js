@@ -1,6 +1,7 @@
 function validar(){
     var duvidas = $("#duvidas").val();
     var nome = $ ("#nome").val();
+    var erro = false;
     //Valida Nome
 if (nome.length <=9) {
 $(document).ready(function(){
@@ -11,29 +12,28 @@ $(document).ready(function(){
     timer: 2000
     
 });
+
 });
-return false;
+erro =true;
+                    //return false;
 }
-    /*Valida e-mail
-usuario = field.value.substring(0, field.value.indexOf("@"));
-dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
-if ((usuario.length >=1) &&
-    (dominio.length >=3) && 
-    (usuario.search("@")==-1) && 
-    (dominio.search("@")==-1) &&
-    (usuario.search(" ")==-1) && 
-    (dominio.search(" ")==-1) &&
-    (dominio.search(".")!=-1) &&      
-    (dominio.indexOf(".") >=1)&& 
-    (dominio.lastIndexOf(".") < dominio.length - 1)) {
-document.getElementById("email").innerHTML="E-mail válido";
-alert("email valido");
-}
-else{
-document.getElementById("email").innerHTML="<font color='red'>Email inválido </font>";
-alert("E-mail invalido");}
-*/
-//Valída duvidas
+var sEmail	= $("#email").val();
+		var emailFilter=/^.+@.+\..{2,}$/;
+		var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;		
+		if(!(emailFilter.test(sEmail))||sEmail.match(illegalChars)){
+			$(document).ready(function(){
+    $.notify({
+        message:"E-mail inválido!"
+    },{
+    type: 'danger',
+    timer: 2000
+    
+});
+});
+
+erro =true;
+                    //return false;
+		}	
 if (duvidas.length > 2) {
 $(document).ready(function(){
     $.notify({
@@ -44,8 +44,12 @@ $(document).ready(function(){
     
 });
 });
-return false;
+erro =true;
 }
-return true;
+if (erro == false) {
+                                $.notify("Cadastrado com sucesso!", "success");
+                            return false;
+}
+return false;
 }
 

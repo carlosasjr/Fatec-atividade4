@@ -18,18 +18,16 @@
 }
 
 #registro{
-    position: relative;
-    color: #009;
+    color: activeborder;
+    font-family: arial, tahoma;
     padding: 8%;
-    background-color: #bdd1df;
+    background-color: #80bdff;
     border-radius: 0px 0px 9px 9px;
+    }
+    h1{
+    position:static;
     }
     label{
      color: #32383e;
      font-weight: bold;
     }
-  div{
-      
-      border-width:2px;
-      border-color: #000;
-  }
