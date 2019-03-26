@@ -1,3 +1,28 @@
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      active: false      
+    });
+  } );
+
+//Função para o recurso de collapse -- Não utilizei
+ function ativar(btn) {
+    var btnID = btn.id;
+    var divID = btnID.substr(3);
+    
+    var div = document.getElementById(divID);
+    
+    if (div.style.display == 'none') {
+       div.style.display = 'block' ;
+    } else
+        div.style.display = 'none';     
+  
+    
+}
+
+
+
+
 function validar(){
     var duvidas = $("#duvidas").val();
     var nome = $ ("#nome").val();
